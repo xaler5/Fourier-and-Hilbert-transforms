@@ -66,7 +66,7 @@ double *n = new double [c]; //min
 double *D = new double [c]; //Derivatives
 double *d = new double [c]; //Differentiations
 //READING THE INPUT AND PUTTING THE VALUES INSIDE sig_in VECTOR
-std::ifstream input("C:\\Users\\Dario\\Desktop\\Tesi\\cartel1.csv");
+std::ifstream input("PATH TO BE READ");
 for(std::string line; getline(input,line);)
 {for(int i=0; i<c; i++){input >> sig_in[i];}}
 //EVALUATING DFT, IDFT, FILTERED SIGNAL, HILBERT TRANSFORM
@@ -79,7 +79,7 @@ hilbert(m,l,c,hil_out,a,b); //filtered hilbert
 
 //WRITING THE OUTPUTS (real part of ft, imag part of ft, abs value of ft, inverse Ft normalized, Hilbert transform (evaluated with the filtered signal)
 ofstream output;
-output.open("C:\\Users\\Dario\\Desktop\\Tesi\\excel\\file.csv");
+output.open("PATH TO BE WRITTEN");
 output <<"Real" << ";" << "Imag" <<";" << "FT" << ";" << "Inverse FT"<< ";" <<"Filtered signal" << ";" << "Hilbert transform" << endl;
 for(int i=0; i<s; i++)
 {
