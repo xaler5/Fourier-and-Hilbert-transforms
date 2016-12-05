@@ -63,7 +63,7 @@ double *imOUTPUT1 = new double [c]; //SSB-MODULATED OUTPUT
 double *OUTPUT2 = new double [c];   //AM-MODULATED OUTPUT
 double *signal = new double [c];
 //reading the input datas and filling the signal variable
-std::ifstream input("C:\\Users\\Dario\\Desktop\\Tesi\\tobemodulated.csv");
+std::ifstream input("PATH TO BE READ");
 for(std::string line; getline(input,line);)
 {for(int i=0; i<c; i++){input >> signal[i];}}
 //for(int i=0; i<c; i++){signal[i]=sin(2*PI*ff*t); t+=T;} //UNCOMMENT TO BUILD YOUR OWN SIGNAL
@@ -94,7 +94,7 @@ reorder(c,N,a,b,K);
 
 //WRITING THE OUTPUTS
 ofstream output;
-output.open("C:\\Users\\Dario\\Desktop\\Tesi\\excel\\modulated.csv");
+output.open("PATH TO BE WRITTEN");
 output << "SSB-modulated signal"<<";"<<"DFT of SSB signal" << ";" << "AM-modulated signal" << ";" << "DFT of AM signal" << ";" << "Frequencies" << ";" << "Signal" << ";" << "DSBdemodulated"<<";"<<"SSBdemodulated"<<endl;
 for(int i=0; i<c; i++)
 {
