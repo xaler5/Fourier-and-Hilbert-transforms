@@ -9,7 +9,7 @@ while(k) {k >>= 1; i++;}
 return i-1;
 }
 
-int potenza2(int n)// function check if the argument is a power of 2
+int power2(int n)// function check if the argument is a power of 2
 {                  // if not it generates h which is the next power of 2 after the argument
  int h=n;          
  if(!(n > 0 && (n & (n - 1)))){ return n;}
@@ -24,7 +24,7 @@ int potenza2(int n)// function check if the argument is a power of 2
  return h;
 };
 
-int invertibit(int N, int n)//N is the samples number and n an integer index 
+int inversebit(int N, int n)//N is the samples number and n an integer index 
 {                           //(in bit) that represents each sample
   int j, r = 0;             //this function assume as value the reverse bit order
   for(j = 1; j <= log2(N); j++) 
@@ -35,7 +35,7 @@ int invertibit(int N, int n)//N is the samples number and n an integer index
 return r; 
 };
 
-void ordina(complex<double>* vec, int n)//reorder the elements in reverse bit order 
+void order(complex<double>* vec, int n)//reorder the elements in reverse bit order 
 {                                      
 const int c=n;                                      
 complex<double> vec2[c];
@@ -102,7 +102,7 @@ cout << "Insert data in the form 'real-part  imaginary-part': " << endl;
  }  
 ordina(vec1,r);
 FFT(vec1,r,t);
-for(int j=0; j<r; j++) {cout << vec1[j] << " ";} //vettore trasformato
+for(int j=0; j<r; j++) {cout << vec1[j] << " ";} //transformed vector
 cout << " " << endl;
 system("pause");
 return 0;
