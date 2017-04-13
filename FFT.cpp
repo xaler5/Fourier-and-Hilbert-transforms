@@ -40,7 +40,7 @@ void order(complex<double>* vec, int n)//reorder the elements in reverse bit ord
 const int c=n;                                      
 complex<double> vec2[c];
  for(int i = 0; i < n; i++)
- {vec2[i] = vec[invertibit(n, i)];}
+ {vec2[i] = vec[inversebit(n, i)];}
  for(int j = 0; j < n; j++)
  {vec[j] = vec2[j];}
 }
@@ -82,7 +82,7 @@ int s; //number of initial samples
 cout << "Insert sample time interval (s): " << endl;
 cin >> t;
 cout << "Insert number of samples: " << endl; cin >> s;
-int r=potenza2(s); 
+int r=power2(s); 
 int d=r-s;        
 const int c=r;
 complex<double> vec1[c];
@@ -100,7 +100,7 @@ cout << "Insert data in the form 'real-part  imaginary-part': " << endl;
  {
  vec1[j]=0;
  }  
-ordina(vec1,r);
+order(vec1,r);
 FFT(vec1,r,t);
 for(int j=0; j<r; j++) {cout << vec1[j] << " ";} //transformed vector
 cout << " " << endl;
